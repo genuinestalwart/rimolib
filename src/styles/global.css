@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--primary: 103 78 255;
+		--secondary: 248 247 255;
+		--accent: 255 192 103;
+		--background: 24 24 35;
+	}
+
+	* {
+		&::-webkit-scrollbar {
+			@apply w-1;
+		}
+		&::-webkit-scrollbar-thumb {
+			@apply bg-primary rounded-full;
+		}
+	}
+
+	body {
+		@apply bg-background;
+		font-family: "Saira Variable", sans-serif;
+		&::-webkit-scrollbar {
+			@apply w-2;
+		}
+		&::-webkit-scrollbar-track {
+			@apply bg-background;
+		}
+	}
+
+	.bg-background,
+	.bg-primary {
+		@apply text-secondary;
+	}
+}

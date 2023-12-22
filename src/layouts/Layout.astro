@@ -1,0 +1,32 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
+import "@fontsource-variable/saira";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='A library containing all of my resources'
+		/>
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+
+		<ViewTransitions />
+		<link rel='icon' type='image/svg' href='/favicon.svg' />
+		<title>{title}</title>
+	</head>
+
+	<body>
+		<slot />
+	</body>
+</html>
