@@ -10,24 +10,22 @@
 		--background: 24 24 35;
 	}
 
-	* {
-		&::-webkit-scrollbar {
-			@apply w-1;
-		}
-		&::-webkit-scrollbar-thumb {
-			@apply bg-primary rounded-full;
-		}
+	*::-webkit-scrollbar {
+		@apply w-1;
+	}
+	*::-webkit-scrollbar-thumb {
+		@apply bg-primary rounded-full;
 	}
 
 	body {
 		@apply bg-background;
 		font-family: "Saira Variable", sans-serif;
-		&::-webkit-scrollbar {
-			@apply w-2;
-		}
-		&::-webkit-scrollbar-track {
-			@apply bg-background;
-		}
+	}
+	body::-webkit-scrollbar {
+		@apply w-2;
+	}
+	body::-webkit-scrollbar-track {
+		@apply bg-background;
 	}
 
 	.bg-background,

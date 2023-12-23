@@ -28,9 +28,7 @@ const list = [
 
 				<div class='flex items-center px-3'>
 					<button class='bg-primary/50 hover:bg-primary font-semibold p-1 md:px-3 md:py-2 rounded-md'>
-						<a
-							href={`${item.link}/download`}
-							download={item.fileName}>
+						<a href={`${item.fileName}`} download={item.fileName}>
 							<Download className='md:hidden h-8 w-8' />
 							<span class='hidden md:inline'>Download</span>
 						</a>
